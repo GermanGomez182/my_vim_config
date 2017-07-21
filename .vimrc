@@ -43,7 +43,7 @@ set nobackup
 set noswapfile
 " NERDTree toogle F12
 silent! nmap <F12> :NERDTreeToggle<CR>
-silent! map <F3> :NERDTreeFind<CR>
+silent! map <F2> :NERDTreeFind<CR>
 
 " let g:NERDTreeMapActivateNode="<F12>"
 let g:NERDTreeMapPreview="<F11>"
@@ -101,7 +101,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " vim-mode
 " -- Check code in current buffer
 nmap ,o :PymodeLint<CR> 
-nmap ,p :PymodeLintAuto<CR>
 let g:pymode_folding = 1
 let g:pymode_lint = 1
 let g:pymode_lint_on_write = 0
@@ -169,11 +168,6 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " AutoComplPop like behavior.
 "let g:neocomplete#enable_auto_select = 1
 
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -215,3 +209,6 @@ set completeopt-=preview
 " ======= BEGIN tagbar =======
 nmap <F8> :TagbarToggle<CR>
 " ======= END tagbar =======
+
+let g:tabman_toggle = '<F3>'
+let g:tabman_number = 0
